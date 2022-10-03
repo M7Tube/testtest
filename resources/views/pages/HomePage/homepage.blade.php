@@ -88,11 +88,12 @@
 
         .floating-container {
             position: fixed;
-            width: 100px;
+            width: 75px;
             height: 100px;
             bottom: 0;
             right: 0;
-            margin: 45px 35px;
+            margin: 0px 0px 65px 0px;
+            /* margin-top: 25px; */
             z-index: 99;
         }
 

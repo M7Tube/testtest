@@ -26,7 +26,7 @@ class AppSettingsSeeder extends Seeder
             'ar_skills' => 'مسوق ألكتروني',
             'en_contactWithUs_message' => 'If you need more information, you can contact me',
             'ar_contactWithUs_message' => 'اذا كنت تحتاج المزيد من المعلومات تستطيع التواصل معي',
-            'email' => 'mahershehadie@gmail.com',
+            'email' => 'maher@mahermarketing99.com',
             'phone' => '+20 102 768 2840',
             'small_personal_pic' => '273041464_465070025025772_6271733742849578996_n.jpg',
             'big_personal_pic' => 'counters-bg.jpg',

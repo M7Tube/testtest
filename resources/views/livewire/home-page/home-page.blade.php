@@ -405,7 +405,7 @@
                     <div id="showcase-wrapper">
                         <h3 class="text-center">{{ __('Appointment Booking') }}</h3>
                         <div id="test"></div>
-                        {{-- <div id="example">
+                         <div id="example">
                             <h3>currentValue:
                                 <p id="current-date"></p>
                             </h3>
@@ -415,7 +415,7 @@
                             <h3>currentValue.toDateSring():
                                 <p id="current-datestring"></p>
                             </h3>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -397,7 +397,7 @@
             @livewire('newsletter-email')
         </section>
         <br>
-        <hr>
+        {{-- <hr>
         <div class="container">
             <div class="row">
                 {{ $date }}
@@ -420,7 +420,7 @@
                 </div>
             </div>
         </div>
-        <br>
+        <br> --}}
         <hr>
         <!-- ======= Blog Section ======= -->
         <section id="blog" class="blog-mf sect-pt4 route">

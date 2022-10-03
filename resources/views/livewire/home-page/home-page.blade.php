@@ -207,10 +207,10 @@
                                         <div class="service-content">
                                             <h2 class="s-title">{{ $service->ar_name }}</h2>
                                             <p class="s-description text-center">
-                                                {{ substr($service->ar_desc, 0, 150) }}<a
+                                                <a
                                                     href="{{ route('ShowService', [app()->getLocale(), 'id' => $service->service_id]) }}"
                                                     class="text-primary">
-                                                    {{ __('...Read More') }}</a>
+                                                    {{ __('Read More') }}</a>
                                             </p>
                                         </div>
                                     </div>

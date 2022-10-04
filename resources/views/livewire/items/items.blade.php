@@ -20,7 +20,7 @@
                                     <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $item->picture)) !!}" alt="Picture"
                                         class="img-fluid" style="width: 100%;
                                         height: 50vw;
-                                        object-fit: fill;">>
+                                        object-fit: fill;">
                                 </div>
                                 <div class="work-content">
                                     <div class="row">

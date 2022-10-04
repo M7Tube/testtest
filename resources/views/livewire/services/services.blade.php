@@ -24,7 +24,7 @@
                                         <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $service->icon)) !!}"
                                             alt="Picture" class="img-fluid" style="width: 100%;
                                             height: 50vw;
-                                            object-fit: fill;">>
+                                            object-fit: fill;">
                                     </div>
                                     <div class="service-content">
                                         <h2 class="s-title">{{ $service->ar_name }}</h2>
@@ -46,7 +46,7 @@
                                         <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $service->icon)) !!}"
                                             alt="Picture" class="img-fluid" style="width: 100%;
                                             height: 50vw;
-                                            object-fit: fill;">>
+                                            object-fit: fill;">
                                     </div>
                                     <div class="service-content">
                                         <h2 class="s-title">{{ $service->en_name }}</h2>

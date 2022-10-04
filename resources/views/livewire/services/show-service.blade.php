@@ -33,13 +33,13 @@
                             </div>
                             <div class="article-content">
                                 @if (app()->getLocale() == 'ar')
-                                    <pre>
+                                    <p>
                                         {!! $service->ar_desc !!}
-                                    </pre>
+                                    </p>
                                 @else
-                                    <pre>
+                                    <p>
                                         {!! $service->en_desc !!}
-                                    </pre>
+                                    </p>
                                 @endif
                             </div>
                         </div>

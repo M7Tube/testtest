@@ -121,7 +121,7 @@
                                                         <div class="media-body text-right">
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    <div class="form-floating mb-1">
+                                                                    <div class="form-floating mb-1" style="direction: rtl;">
                                                                         <div class="col-md-12 form-group" wire:ignore>
                                                                             <label
                                                                                 for="">{{ __('Arabic Description') }}</label>

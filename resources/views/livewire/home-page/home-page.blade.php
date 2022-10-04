@@ -202,7 +202,9 @@
                                     <div class="service-box">
                                         <div class="work-img">
                                             <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $service->icon)) !!}"
-                                                alt="Picture" class="img-fluid">
+                                                alt="Picture" class="img-fluid" style="width: 100%;
+                                                height: 50vw;
+                                                object-fit: fill;">>
                                         </div>
                                         <div class="service-content">
                                             <h2 class="s-title">{{ $service->ar_name }}</h2>
@@ -223,7 +225,9 @@
                                     <div class="service-box">
                                         <div class="work-img">
                                             <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $service->icon)) !!}"
-                                                alt="Picture" class="img-fluid">
+                                                alt="Picture" class="img-fluid" style="width: 100%;
+                                                height: 50vw;
+                                                object-fit: fill;">>
                                         </div>
                                         <div class="service-content">
                                             <h2 class="s-title">{{ $service->en_name }}</h2>
@@ -350,7 +354,9 @@
                                     class="portfolio-lightbox"> --}}
                                     <div class="work-img">
                                         <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $item->picture)) !!}"
-                                            alt="Picture" class="img-fluid">
+                                            alt="Picture" class="img-fluid" style="width: 100%;
+                                            height: 50vw;
+                                            object-fit: fill;">>
                                     </div>
                                     {{-- </a> --}}
                                     <div class="work-content">
@@ -445,7 +451,9 @@
                                 <div class="card-img">
                                     <a href="{{ route('post', [app()->getLocale(), 'id' => $post->post_id]) }}"><img
                                             src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $post->picture)) !!}"
-                                            alt="picture" class="img-fluid"></a>
+                                            alt="picture" class="img-fluid" style="width: 100%;
+                                            height: 50vw;
+                                            object-fit: fill;">></a>
                                 </div>
                                 <div class="card-body">
                                     <div class="card-category-box">

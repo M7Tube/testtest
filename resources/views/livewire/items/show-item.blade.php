@@ -32,7 +32,9 @@
                     <div class="col-md-8">
                         <div class="post-box">
                             <div class="post-thumb">
-                                <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $item->picture)) !!}" class="img-fluid"
+                                <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $item->picture)) !!}" class="img-fluid" style="width: 100%;
+                                height: 50vw;
+                                object-fit: fill;">
                                     alt="">
                             </div>
                             <div class="post-meta">
@@ -189,7 +191,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="widget-sidebar sidebar-search">
-                            <h5 class="sidebar-title">{{ __('Buy For ') }} <strong>{{ $item->price }}</strong></h5>
+                            <h5 class="sidebar-title">{{ __('Buy For ') }} <strong>{{ $item->price }}$</strong></h5>
                             <div class="sidebar-content">
                                 <form>
                                     <div class="input-group">

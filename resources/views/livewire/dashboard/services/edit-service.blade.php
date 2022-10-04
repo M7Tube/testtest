@@ -100,8 +100,8 @@
                                                                                 for="">{{ __('English Description') }}</label>
                                                                             <textarea type="text" wire:model="en_desc" class="ckeditor" id="en_desc"></textarea>
                                                                             <script>
-                                                                                const editor = CKEDITOR.replace('en_desc');
-                                                                                editor.on('change', function(event) {
+                                                                                const editor1 = CKEDITOR.replace('en_desc');
+                                                                                editor1.on('change', function(event) {
                                                                                     console.log(event.editor.getData())
                                                                                     @this.set('en_desc', event.editor.getData());
                                                                                 })
@@ -144,8 +144,8 @@
                                                                                 for="">{{ __('Arabic Description') }}</label>
                                                                             <textarea type="text" wire:model="ar_desc" class="ckeditor" id="ar_desc"></textarea>
                                                                             <script>
-                                                                                const editor = CKEDITOR.replace('ar_desc');
-                                                                                editor.on('change', function(event) {
+                                                                                const editor2 = CKEDITOR.replace('ar_desc');
+                                                                                editor2.on('change', function(event) {
                                                                                     console.log(event.editor.getData())
                                                                                     @this.set('ar_desc', event.editor.getData());
                                                                                 })

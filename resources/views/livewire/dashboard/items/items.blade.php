@@ -45,10 +45,10 @@
                                             <p class="text-xs font-weight-bold mb-0">{{ $data->ar_name }}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0"> {{ $data->en_desc }}</p>
+                                            <p class="text-xs font-weight-bold mb-0"> {!! $data->en_desc !!}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $data->ar_desc }}</p>
+                                            <p class="text-xs font-weight-bold mb-0">{!! $data->ar_desc !!}</p>
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">{{ $data->buy_link }}</p>

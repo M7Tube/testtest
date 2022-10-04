@@ -134,7 +134,7 @@
                                                     <div class="media">
                                                         <div class="media-body text-right">
                                                             <div class="row">
-                                                                <div class="col-md-12">
+                                                                <div class="col-md-12">d
                                                                     <div class="form-floating mb-1">
                                                                         <input class="form-control" id="en_desc"
                                                                             type="text" autocomplete="off"

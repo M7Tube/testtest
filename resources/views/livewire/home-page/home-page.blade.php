@@ -203,7 +203,7 @@
                                         <div class="work-img">
                                             <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $service->icon)) !!}"
                                                 alt="Picture" class="img-fluid" style="width: 100%;
-                                                height: 50vw;
+                                                height: 20vw;
                                                 object-fit: fill;">
                                         </div>
                                         <div class="service-content">
@@ -226,7 +226,7 @@
                                         <div class="work-img">
                                             <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $service->icon)) !!}"
                                                 alt="Picture" class="img-fluid" style="width: 100%;
-                                                height: 50vw;
+                                                height: 20vw;
                                                 object-fit: fill;">
                                         </div>
                                         <div class="service-content">
@@ -355,7 +355,7 @@
                                     <div class="work-img">
                                         <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $item->picture)) !!}"
                                             alt="Picture" class="img-fluid" style="width: 100%;
-                                            height: 50vw;
+                                            height: 20vw;
                                             object-fit: fill;">
                                     </div>
                                     {{-- </a> --}}
@@ -452,7 +452,7 @@
                                     <a href="{{ route('post', [app()->getLocale(), 'id' => $post->post_id]) }}"><img
                                             src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $post->picture)) !!}"
                                             alt="picture" class="img-fluid" style="width: 100%;
-                                            height: 50vw;
+                                            height: 20vw;
                                             object-fit: fill;"></a>
                                 </div>
                                 <div class="card-body">

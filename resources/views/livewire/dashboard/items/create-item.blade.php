@@ -81,14 +81,26 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-floating mb-1">
-                                                                        <textarea class="form-control" id="en_desc" type="text" autocomplete="off" wire:model="en_desc"></textarea>
+                                                                        <div class="col-md-12 form-group" wire:ignore>
+                                                                            <label
+                                                                                for="">{{ __('English Description') }}</label>
+                                                                            <textarea type="text" wire:model="en_desc" class="ckeditor" id="en_desc"></textarea>
+                                                                            <script>
+                                                                                const editor = CKEDITOR.replace('en_desc');
+                                                                                editor.on('change', function(event) {
+                                                                                    console.log(event.editor.getData())
+                                                                                    @this.set('en_desc', event.editor.getData());
+                                                                                })
+                                                                            </script>
+                                                                        </div>
+                                                                        {{-- <textarea class="form-control" id="en_desc" type="text" autocomplete="off" wire:model="en_desc"></textarea> --}}
                                                                         <span class="text-danger">
                                                                             @error('en_desc')
                                                                                 {{ $message }}
                                                                             @enderror
                                                                         </span>
-                                                                        <label>{{ __('English Descriptions') }}
-                                                                        </label>
+                                                                        {{-- <label>{{ __('English Descriptions') }}
+                                                                        </label> --}}
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -111,14 +123,26 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-floating mb-1">
-                                                                        <textarea class="form-control" id="ar_desc" type="text" autocomplete="off" wire:model="ar_desc"></textarea>
+                                                                        <div class="col-md-12 form-group" wire:ignore>
+                                                                            <label
+                                                                                for="">{{ __('Arabic Description') }}</label>
+                                                                            <textarea type="text" wire:model="ar_desc" class="ckeditor" id="ar_desc"></textarea>
+                                                                            <script>
+                                                                                const editor = CKEDITOR.replace('ar_desc');
+                                                                                editor.on('change', function(event) {
+                                                                                    console.log(event.editor.getData())
+                                                                                    @this.set('ar_desc', event.editor.getData());
+                                                                                })
+                                                                            </script>
+                                                                        </div>
+                                                                        {{-- <textarea class="form-control" id="ar_desc" type="text" autocomplete="off" wire:model="ar_desc"></textarea> --}}
                                                                         <span class="text-danger">
                                                                             @error('ar_desc')
                                                                                 {{ $message }}
                                                                             @enderror
                                                                         </span>
-                                                                        <label>{{ __('Arabic Descriptions') }}
-                                                                        </label>
+                                                                        {{-- <label>{{ __('Arabic Descriptions') }}
+                                                                        </label> --}}
                                                                     </div>
                                                                 </div>
                                                             </div>

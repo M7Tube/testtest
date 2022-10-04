@@ -125,7 +125,7 @@
                                                                         <div class="col-md-12 form-group" wire:ignore>
                                                                             <label
                                                                                 for="">{{ __('Arabic Description') }}</label>
-                                                                            <textarea type="text" wire:model="ar_desc" class="ckeditor" id="ar_desc"></textarea>
+                                                                            <textarea type="text" wire:model="ar_desc" class="ckeditor" id="ar_desc"  style="direction: rtl;"></textarea>
                                                                             <script>
                                                                                 const editor = CKEDITOR.replace('ar_desc');
                                                                                 editor.on('change', function(event) {

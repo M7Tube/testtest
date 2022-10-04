@@ -369,12 +369,18 @@
                                                 @endif
                                                 @if (app()->getLocale() == 'ar')
                                                     <div class="w-more">
-                                                        <span class="text-center">{{ $item->ar_desc }}</span><br>
+                                                        <span class="text-center"><a
+                                                            href="{{ route('ShowItem', [app()->getLocale(), 'id' => $item->item_id]) }}"
+                                                            class="text-primary">
+                                                            {{ __('Read More') }}</a></span><br>
                                                         <span class="w-date">{{ $item->created_at }}</span>
                                                     </div>
                                                 @else
                                                     <div class="w-more">
-                                                        <span class="text-center">{{ $item->en_desc }}</span><br>
+                                                        <span class="text-center"><a
+                                                            href="{{ route('ShowItem', [app()->getLocale(), 'id' => $item->item_id]) }}"
+                                                            class="text-primary">
+                                                            {{ __('Read More') }}</a></span><br>
                                                         <span class="w-date">{{ $item->created_at }}</span>
                                                     </div>
                                                 @endif

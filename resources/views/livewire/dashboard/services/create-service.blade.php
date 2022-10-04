@@ -173,6 +173,7 @@
                                                                                 for="">{{ __('Arabic Description') }}</label>
                                                                             <textarea type="text" wire:model="ar_desc" class="ckeditor cke_rtl" id="ar_desc"></textarea>
                                                                             <script>
+                                                                                config.contentsLangDirection = 'rtl';
                                                                                 const editor2 = CKEDITOR.replace('ar_desc');
                                                                                 editor2.on('change', function(event) {
                                                                                     console.log(event.editor.getData())

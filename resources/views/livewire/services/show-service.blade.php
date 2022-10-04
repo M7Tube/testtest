@@ -18,7 +18,7 @@
         <section class="blog-wrapper sect-pt4" id="blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="post-box">
                             <div class="post-thumb">
                                 <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $service->icon)) !!}" class="img-fluid"

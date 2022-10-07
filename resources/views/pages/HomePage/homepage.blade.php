@@ -722,7 +722,7 @@
     <script src="{{ asset('vendor2/php-email-form/validate.js') }}"></script>
     <!-- Template Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
-    <script>
+    {{-- <script>
         // Polyfill for Element.prototype.closest (for IE 9+)
         if (!Element.prototype.matches) {
             Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
@@ -1090,7 +1090,7 @@
 
             console.log(`The current value of the calendar is: ${currentValue}`);
         });
-    </script>
+    </script> --}}
     @livewireScripts
 </body>
 

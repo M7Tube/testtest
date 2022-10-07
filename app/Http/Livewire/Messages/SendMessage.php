@@ -18,7 +18,7 @@ class SendMessage extends Component
 
     public function mount()
     {
-        $this->info = AppSettings::first();
+        // $this->info = AppSettings::first();
     }
 
     public function sendMessage()
@@ -41,10 +41,10 @@ class SendMessage extends Component
 
     public function clear()
     {
-        $this->name=null;
-        $this->email=null;
-        $this->subject=null;
-        $this->message=null;
+        $this->name = null;
+        $this->email = null;
+        $this->subject = null;
+        $this->message = null;
     }
     public function render()
     {

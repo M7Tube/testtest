@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomePage\HomePageController;
 use App\Models\NewsletterEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,9 +25,7 @@ Route::get('/{language}/changLang', function (Request $request) {
     }
     return 1;
 })->name('changLang');
-Route::get('/language/{language}', function () {
-    return view('pages.HomePage.homepage');
-})->name('homepage');
+Route::get('/language/{language}', HomePageController::class)->name('homepage');
 //Single Post page
 Route::view('{language}/post/{id}', 'pages.Post.post')->name('post');
 //Items page

@@ -13,36 +13,35 @@ use Livewire\Component;
 
 class HomePage extends Component
 {
-    public $info;
-    public $services;
-    public $statistics;
-    public $posts;
-    public $items;
-    public $skills;
-    public $date;
-    protected $listeners = [
-        'getData'
-    ];
-    public function mount()
-    {
-        $this->info = AppSettings::first();
-        $this->services = Services::all()->take(6);
-        $this->statistics = Statistics::first();
-        $this->posts = Post::all()->take(6);
-        $this->items = Item::all()->take(6);
-        $this->skills = Skills::all();
-    }
+    // public $info;
+    // public $services;
+    // public $statistics;
+    // public $posts;
+    // public $items;
+    // public $skills;
+    // public $date;
 
-    public function getData($value)
-    {
-        dd($value);
-        if (!is_null($value)) {
-            $this->date = $value;
-        }
-    }
+    // protected $listeners = [
+    //     'getData'
+    // ];
 
-    public function render()
-    {
-        return view('livewire.home-page.home-page');
-    }
+    // public function getData($value)
+    // {
+    //     dd($value);
+    //     if (!is_null($value)) {
+    //         $this->date = $value;
+    //     }
+    // }
+
+    // public function render()
+    // {
+    //     return view('livewire.home-page.home-page',[
+    //         'info'=>AppSettings::first(),
+    //         'services'=>Services::latest()->take(6)->get(),
+    //         'posts'=>Post::latest()->take(6)->get(),
+    //         'items'=>Item::latest()->take(6)->get(),
+    //         'statistics'=>Statistics::first(),
+    //         'skills'=>Skills::latest()->get(),
+    //     ]);
+    // }
 }

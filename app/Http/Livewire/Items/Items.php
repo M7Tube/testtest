@@ -10,19 +10,24 @@ use Livewire\Component;
 class Items extends Component
 {
     use LivewireWithPagination;
-    public $info;
+    protected $paginationTheme = 'bootstrap';
 
-    public function mount()
+    // public $info;
+    public $readyToLoad = false;
+
+    public function loadData()
     {
-        $this->info = AppSettings::first();
-        // $this->items = Item::simplePaginate();
+        $this->readyToLoad = true;
     }
+
     public function render()
     {
         return view(
             'livewire.items.items',
             [
-                'items' => Item::paginate(10),
+                'items' => $this->readyToLoad
+                    ?  Item::paginate(10,['item_id','ar_name','en_name','picture'])
+                    : [],
             ]
         );
     }

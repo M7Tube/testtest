@@ -10,16 +10,23 @@ use Livewire\Component;
 class AllPost extends Component
 {
     use LivewireWithPagination;
+    protected $paginationTheme = 'bootstrap';
+    public $readyToLoad = false;
 
-    public $info;
-
-    public function mount()
+    public function loadData()
     {
-        $this->info = AppSettings::first();
+        $this->readyToLoad = true;
     }
 
     public function render()
     {
-        return view('livewire.post.all-post', ['posts' => Post::paginate(2)]);
+        return view(
+            'livewire.post.all-post',
+            [
+                'posts' => $this->readyToLoad
+                    ? Post::with('user')->paginate(10,['post_id','main_title','title','picture','user_id','body','created_at'])
+                    : []
+            ]
+        );
     }
 }

@@ -11,6 +11,7 @@ use Livewire\Component;
 class Services extends Component
 {
     use LivewireWithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     // public $info;
     public $readyToLoad = false;
@@ -18,11 +19,6 @@ class Services extends Component
     public function loadData()
     {
         $this->readyToLoad = true;
-    }
-
-    public function mount()
-    {
-        // $this->info = AppSettings::first();
     }
 
     public function render()

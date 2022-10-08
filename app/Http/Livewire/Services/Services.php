@@ -12,15 +12,25 @@ class Services extends Component
 {
     use LivewireWithPagination;
 
-    public $info;
+    // public $info;
+    public $readyToLoad = false;
+
+    public function loadData()
+    {
+        $this->readyToLoad = true;
+    }
 
     public function mount()
     {
-        $this->info = AppSettings::first();
+        // $this->info = AppSettings::first();
     }
 
     public function render()
     {
-        return view('livewire.services.services', ['services' => ModelsServices::paginate(10)]);
+        return view('livewire.services.services', [
+            'services' => $this->readyToLoad
+            ? ModelsServices::paginate(10)
+            : [],
+        ]);
     }
 }

@@ -22,6 +22,7 @@
     <link href="{{ asset('vendor2/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/loadingIndicator.css') }}" rel="stylesheet">
     @yield('head')
     @livewireStyles
 </head>

@@ -24,7 +24,9 @@ class HomePageController extends Controller
 
         $items = Item::latest('item_id')->take(6)->get(['item_id', 'ar_name', 'en_name', 'picture', 'created_at']);
         $services = Services::latest('service_id')->take(6)->get(['service_id', 'en_name', 'ar_name', 'en_desc', 'ar_desc', 'icon']);
-        $posts = Post::latest('post_id')->take(6)->get();
+        $posts = Post::latest('post_id')->with(['user' => function ($query) {
+            return $query->select('user_id', 'name');
+        }])->take(6)->get();
         $statistics = Statistics::first();
         $skills = Skills::latest('skill_id')->get();
         $info = AppSettings::first();

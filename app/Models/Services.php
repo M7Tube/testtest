@@ -16,6 +16,8 @@ class Services extends Model
         'en_desc',
         'ar_desc',
         'icon',
+        'btn_text',
+        'btn_link',
     ];
 
     public  static function search($search)

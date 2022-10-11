@@ -22,8 +22,11 @@
                                         {{ __('Arabic Descriptions') }}</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         {{ __('Icon') }}</th>
-                                    <th class=""> <a
-                                            href="{{ route('CreateService', app()->getLocale()) }}"
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Button Text') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Button Link') }}</th>
+                                    <th class=""> <a href="{{ route('CreateService', app()->getLocale()) }}"
                                             class="text-white btn-success btn font-weight-bold text-xs"
                                             data-toggle="tooltip" data-original-title="Edit user">
                                             {{ __('Create') }}
@@ -46,7 +49,15 @@
                                             <p class="text-xs font-weight-bold mb-0">{!! $data->ar_desc !!}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0"><img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $data->icon)) !!}" alt="picture" width="150px"></p>
+                                            <p class="text-xs font-weight-bold mb-0"><img
+                                                    src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $data->icon)) !!}"
+                                                    alt="picture" width="150px"></p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->btn_text }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->btn_link }}</p>
                                         </td>
                                         <td class="align-middle">
                                             <a href="{{ route('EditService', [app()->getLocale(), 'id' => $data->service_id]) }}"

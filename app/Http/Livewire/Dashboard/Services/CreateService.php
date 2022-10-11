@@ -18,6 +18,8 @@ class CreateService extends Component
     public $en_desc;
     public $ar_desc;
     public $icon;
+    public $btn_text;
+    public $btn_link;
 
     public $message;
 
@@ -29,6 +31,9 @@ class CreateService extends Component
             'en_desc' => ['required', 'string', 'max:28800'],
             'ar_desc' => ['required', 'string', 'max:28800'],
             'icon' => ['required', 'mimes:jpg,png,jpeg', 'max:10500'],
+            'btn_text' => ['required', 'string', 'max:7200'],
+            'btn_link' => ['required', 'string', 'max:7200'],
+
         ]);
         Services::Create([
             'en_name' => $this->en_name,
@@ -36,6 +41,8 @@ class CreateService extends Component
             'en_desc' =>  $this->en_desc,
             'ar_desc' =>  $this->ar_desc,
             'icon' =>  $this->icon->getClientOriginalName() ?? '',
+            'btn_text' =>  $this->btn_text,
+            'btn_link' =>  $this->btn_link,
         ]);
         if ($this->icon) {
             $this->icon->storeAs('img/', $this->icon->getClientOriginalName());
@@ -53,6 +60,8 @@ class CreateService extends Component
             'en_desc',
             'ar_desc',
             'icon',
+            'btn_text',
+            'btn_link',
         ]);
     }
     public function render()

@@ -236,6 +236,74 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="my-2 col-12">
+                                        <div class="Scard card shadow-lg border-2 rounded-lg">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="media">
+                                                        <div class="media-body text-right">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating mb-1">
+                                                                        <input class="form-control" id="btn_text"
+                                                                            type="file" autocomplete="off"
+                                                                            wire:model="btn_text" />
+                                                                        <span class="text-danger">
+                                                                            @error('btn_text')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </span>
+                                                                        <label>{{ __('Button Text') }}
+                                                                        </label>
+                                                                        {{-- <u><a href="https://icons.getbootstrap.com"
+                                                                                target="blank">Get It From Here</a></u> --}}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="my-2 col-12">
+                                        <div class="Scard card shadow-lg border-2 rounded-lg">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="media">
+                                                        <div class="media-body text-right">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating mb-1">
+                                                                        <input class="form-control" id="btn_link"
+                                                                            type="file" autocomplete="off"
+                                                                            wire:model="btn_link" />
+                                                                        <span class="text-danger">
+                                                                            @error('btn_link')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </span>
+                                                                        <label>{{ __('Button Link') }}
+                                                                        </label>
+                                                                        {{-- <u><a href="https://icons.getbootstrap.com"
+                                                                                target="blank">Get It From Here</a></u> --}}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                             <button type="submit"

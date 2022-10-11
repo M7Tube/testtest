@@ -21,6 +21,8 @@ class ServicesSeeder extends Seeder
             'en_desc' => 'dfsaasdf',
             'ar_desc' => 'شيسبيشسبشسيب',
             'icon' => '1.png',
+            'btn_text' => 'Test Action',
+            'btn_link' => 'https://www.google.com/',
         ]);
     }
 }

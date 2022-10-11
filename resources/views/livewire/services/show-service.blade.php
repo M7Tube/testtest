@@ -22,7 +22,8 @@
                         <div class="post-box">
                             <div class="post-thumb">
                                 <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $service->icon)) !!}" class="img-fluid"
-                                    alt="" style="width: 100%;
+                                    alt=""
+                                    style="width: 100%;
                                                     height: 50vw;
                                                     object-fit: fill;">
                             </div>
@@ -43,6 +44,10 @@
                                         {!! $service->en_desc !!}
                                     </p>
                                 @endif
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a class="btn btn-block w-50 mx-auto btn-outline-info"
+                                        href="{{ $service->btn_link }}">{{ $service->btn_text ?? '' }}</a>
+                                </div>
                             </div>
                         </div>
                     </div>

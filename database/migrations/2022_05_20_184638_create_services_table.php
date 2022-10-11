@@ -20,6 +20,8 @@ return new class extends Migration
             $table->text('en_desc');
             $table->text('ar_desc');
             $table->text('icon');
+            $table->text('btn_text');
+            $table->text('btn_link');
             $table->timestamps();
         });
     }

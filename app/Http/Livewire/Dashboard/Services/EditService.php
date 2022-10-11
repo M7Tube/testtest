@@ -18,6 +18,8 @@ class EditService extends Component
     public $en_desc;
     public $ar_desc;
     public $icon;
+    public $btn_text;
+    public $btn_link;
 
     public $message;
 
@@ -30,6 +32,8 @@ class EditService extends Component
             $this->ar_name = $data->ar_name;
             $this->en_desc = $data->en_desc;
             $this->ar_desc = $data->ar_desc;
+            $this->btn_text = $data->btn_text;
+            $this->btn_link = $data->btn_link;
         } else {
         }
     }
@@ -42,6 +46,8 @@ class EditService extends Component
             'en_desc' => ['required', 'string', 'max:28800'],
             'ar_desc' => ['required', 'string', 'max:28800'],
             'icon' => ['sometimes', 'nullable', 'mimes:jpg,png,jpeg', 'max:10500'],
+            'btn_text' => ['required', 'string', 'max:7200'],
+            'btn_link' => ['required', 'string', 'max:7200'],
         ]);
         $data = Services::where('service_id', $this->service_id)->first();
         if ($data) {
@@ -49,6 +55,8 @@ class EditService extends Component
             $data->ar_name = $this->ar_name;
             $data->en_desc = $this->en_desc;
             $data->ar_desc = $this->ar_desc;
+            $data->btn_text = $this->btn_text;
+            $data->btn_link = $this->btn_link;
             if ($this->icon) {
                 $data->icon = $this->icon->getClientOriginalName() ?? $data->icon;
                 $this->icon->storeAs('img/', $this->icon->getClientOriginalName());

@@ -18,6 +18,8 @@ class Services extends Component
     public $en_desc;
     public $ar_desc;
     public $icon;
+    public $btn_text;
+    public $btn_link;
 
     public $orderBy = 'en_name';
     public $orderAsc = true;
@@ -29,7 +31,8 @@ class Services extends Component
             'service_id', 'en_name', 'ar_name',
             'en_desc',
             'ar_desc',
-            'icon'
+            'icon',
+            'btn_text', 'btn_link'
         ]);
     }
 

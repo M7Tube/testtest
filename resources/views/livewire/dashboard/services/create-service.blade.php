@@ -270,6 +270,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {{--  --}}
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <div class="my-2 col-12">

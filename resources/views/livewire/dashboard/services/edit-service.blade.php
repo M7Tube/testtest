@@ -218,7 +218,7 @@
                                                                 <div class="col-md-12">
                                                                     <div class="form-floating mb-1">
                                                                         <input class="form-control" id="btn_text"
-                                                                            type="file" autocomplete="off"
+                                                                            type="text" autocomplete="off"
                                                                             wire:model="btn_text" />
                                                                         <span class="text-danger">
                                                                             @error('btn_text')
@@ -252,7 +252,7 @@
                                                                 <div class="col-md-12">
                                                                     <div class="form-floating mb-1">
                                                                         <input class="form-control" id="btn_link"
-                                                                            type="file" autocomplete="off"
+                                                                            type="text" autocomplete="off"
                                                                             wire:model="btn_link" />
                                                                         <span class="text-danger">
                                                                             @error('btn_link')

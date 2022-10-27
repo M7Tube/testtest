@@ -45,7 +45,7 @@ class EditPost extends Component
         ]);
         $this->picture->storeAs('img/', $this->picture->getClientOriginalName());
     }
-
+// 
     public function edit()
     {
         $this->validate([

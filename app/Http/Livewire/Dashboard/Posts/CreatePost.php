@@ -67,7 +67,7 @@ class CreatePost extends Component
             'user_id',
         ]);
     }
-
+// 
     public function render()
     {
         return view('livewire.dashboard.posts.create-post');

@@ -5,6 +5,7 @@
             <div class="table-cell">
                 <div class="container">
                     <h2 class="hero-title mb-4">{{ $post->main_title }}</h2>
+                    {{-- ddd --}}
                     {{-- <ol class="breadcrumb d-flex justify-content-center">
                         <li class="breadcrumb-item">
                             <a href="#">Home</a>
@@ -42,7 +43,7 @@
                                         <span class="bi bi-tag"></span>
                                         <a href="#">Web Design</a>
                                     </li>
-                                    <li>g
+                                    <li>
                                         <span class="bi bi-chat-left-text"></span>
                                         <a href="#">14</a>
                                     </li> --}}

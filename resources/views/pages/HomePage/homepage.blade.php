@@ -204,7 +204,7 @@
                 @endif --}}
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html" class="logo"><img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid"></a>-->
-                <a href="{{ route('homepage') }}" class="logo"><img src="{{ asset('img/maherLogo.png') }}" alt="" width="100px;" class="img-fluid"></a>
+                <a href="{{ route('homepage', app()->getLocale()) }}" class="logo"><img src="{{ asset('img/maherLogo.png') }}" alt="" width="100px;" class="img-fluid"></a>
                 <nav id="navbar" class="navbar">
                     <ul>
                         <li><a class="nav-link scrollto active" href="#hero">{{ __('Home') }}</a></li>

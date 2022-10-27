@@ -37,7 +37,8 @@
                 <h1 class="logo"><a href="{{ route('homepage') }}">{{ $info->en_peronal_name }}</a></h1>
             @endif --}}
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="{{ route('homepage') }}" class="logo"><img src="{{ asset('img/maherLogo.png') }}" alt="" width="100px;" class="img-fluid"></a>
+            <a href="{{ route('homepage', app()->getLocale()) }}" class="logo"><img
+                    src="{{ asset('img/maherLogo.png') }}" alt="" width="100px;" class="img-fluid"></a>
 
             <nav id="navbar" class="navbar">
                 <ul>

@@ -29,7 +29,7 @@
         <section class="blog-wrapper sect-pt4" id="blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="post-box">
                             <div class="post-thumb">
                                 <img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $item->picture)) !!}" class="img-fluid" style="width: 100%;
@@ -61,11 +61,11 @@
                             <div class="article-content">
                                 @if (app()->getLocale() == 'ar')
                                     <p>
-                                        {{ $item->ar_desc }}
+                                        {!! $item->ar_desc !!}
                                     </p>
                                 @else
                                     <p>
-                                        {{ $item->en_desc }}
+                                        {!! $item->en_desc !!}
                                     </p>
                                 @endif
 
@@ -189,13 +189,13 @@
                             </form>
                         </div> --}}
                     </div>
-                    <div class="col-md-4">
-                        <div class="widget-sidebar sidebar-search">
-                            <h5 class="sidebar-title">{{ __('Buy For ') }} <strong>{{ $item->price }}$</strong></h5>
+                    <div class="col-md-12">
+                        <div class="widget-sidebar sidebar-search mx-auto">
+                            <h5 class="sidebar-title text-center">{{ __('Buy For ') }} <strong>{{ $item->price }}$</strong></h5>
                             <div class="sidebar-content">
                                 <form>
                                     <div class="input-group">
-                                        <a class="btn btn-block w-100 btn-outline-success"
+                                        <a class="btn btn-block w-50 btn-outline-success mx-auto"
                                             href="{{ $item->buy_link }}"><i class="bi bi-cart-check"></i>
                                             {{ __('Buy Now') }}</a>
                                     </div>

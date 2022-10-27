@@ -42,7 +42,8 @@
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">
-                                                {!! substr($data->body, 0, 25) . '...' !!}</p>
+                                                {!! substr($data->body, 0, 25) . '...' !!}
+                                            </p>
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0"><img

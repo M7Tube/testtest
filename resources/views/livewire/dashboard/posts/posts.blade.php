@@ -42,13 +42,11 @@
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">
-                                                <!-- Button trigger modal -->
+                                                <!-- Button trigger modal d -->
                                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                                     data-bs-target="#exampleModal{{ $loop->index }}">
                                                     View Description
                                                 </button>
-
-                                                <!-- Modal -->
                                             <div class="modal fade" id="exampleModal{{ $loop->index }}" tabindex="-1"
                                                 aria-labelledby="exampleModal{{ $loop->index }}Label"
                                                 aria-hidden="true">

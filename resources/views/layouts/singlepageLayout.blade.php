@@ -34,7 +34,7 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             {{-- <h1 class="logo"><a href="{{ route('homepage', 'en') }}">{{ __('Maher Shehadie') }}</a></h1> --}}
-            <a href="index.html" class="logo"><img src="{{ asset('img/maherLogo.png') }}" alt=""  width="100px;" class="img-fluid"></a>
+            <a href="{{ route('homepage') }}" class="logo"><img src="{{ asset('img/maherLogo.png') }}" alt=""  width="100px;" class="img-fluid"></a>
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto " href="{{ route('homepage', 'en') }}">{{ __('Home') }}</a>

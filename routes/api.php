@@ -22,5 +22,8 @@ Route::get('migrate', function () {
     Artisan::call('migrate:refresh --seed');
     return true;
 });
-
+Route::get('clear', function () {
+    Artisan::call('optimize:clear');
+    return true;
+});
 //d

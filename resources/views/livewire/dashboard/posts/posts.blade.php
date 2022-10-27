@@ -41,8 +41,9 @@
                                             <p class="text-xs font-weight-bold mb-0">{{ $data->title }}</p>
                                         </td>
                                         <td>
+                                            {{--  --}}
                                             <p class="text-xs font-weight-bold mb-0">
-                                                <!-- Button trigger modal d -->
+                                                <!-- Button trigger modal  -->
                                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                                     data-bs-target="#exampleModal{{ $loop->index }}">
                                                     View Description

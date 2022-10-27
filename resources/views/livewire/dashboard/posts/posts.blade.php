@@ -24,8 +24,7 @@
                                         {{ __('KeyWords') }}</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         {{ __('User') }}</th>
-                                    <th class=""> <a
-                                            href="{{ route('CreatePost', app()->getLocale()) }}"
+                                    <th class=""> <a href="{{ route('CreatePost', app()->getLocale()) }}"
                                             class="text-white btn-success btn font-weight-bold text-xs"
                                             data-toggle="tooltip" data-original-title="Edit user">
                                             {{ __('Create') }}
@@ -43,10 +42,12 @@
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">
-                                                {{ substr($data->body, 0, 25) . '...' }}</p>
+                                                {!! substr($data->body, 0, 25) . '...' !!}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0"><img src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $data->picture)) !!}" alt="picture" width="150px"></p>
+                                            <p class="text-xs font-weight-bold mb-0"><img
+                                                    src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $data->picture)) !!}"
+                                                    alt="picture" width="150px"></p>
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">{{ $data->keywords }}</p>

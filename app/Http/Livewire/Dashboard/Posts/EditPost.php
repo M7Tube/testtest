@@ -51,7 +51,7 @@ class EditPost extends Component
         $this->validate([
             'main_title' => ['string', 'max:144'],
             'title' => ['string', 'max:144'],
-            'body' => ['string', 'max:1044'],
+            'body' => ['string', 'max:10044'],
             'keywords' => ['string', 'max:864'],
         ]);
         $data = Post::where('post_id', $this->post_id)->first();

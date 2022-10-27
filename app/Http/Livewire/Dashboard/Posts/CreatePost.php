@@ -40,7 +40,7 @@ class CreatePost extends Component
         $this->validate([
             'main_title' => ['required', 'string', 'max:144'],
             'title' => ['required', 'string', 'max:144'],
-            'body' => ['required', 'string', 'max:1044'],
+            'body' => ['required', 'string', 'max:10044'],
             'picture' => ['required', 'mimes:jpg,png,jpeg'],
             'keywords' => ['required', 'string', 'max:864'],
         ]);

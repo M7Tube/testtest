@@ -42,7 +42,34 @@
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">
-                                                {!! $data->body !!}
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal{{ $loop->index }}">
+                                                    View Description
+                                                </button>
+
+                                                <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal{{ $loop->index }}" tabindex="-1"
+                                                aria-labelledby="exampleModal{{ $loop->index }}Label"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5"
+                                                                id="exampleModal{{ $loop->index }}Label">Body</h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            {!! $data->body !!}
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             </p>
                                         </td>
                                         <td>

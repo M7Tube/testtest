@@ -20,8 +20,7 @@
     </div>
 
     <main id="main">
-
-        <!-- ======= Blog Single Section =f====== -->
+        <!-- ======= Blog Single Section ======= -->
         <section class="blog-wrapper sect-pt4" id="blog">
             <div class="container">
                 <div class="row">

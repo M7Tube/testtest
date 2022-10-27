@@ -42,7 +42,7 @@
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">
-                                                {!! substr($data->body, 0, 25) . '...' !!}
+                                                {!! $data->body !!}
                                             </p>
                                         </td>
                                         <td>

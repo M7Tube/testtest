@@ -41,6 +41,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
+                    {{--  --}}
                     <li><a class="nav-link scrollto active" href="#hero">{{ __('lang.Home') }}</a></li>
                     <li><a class="nav-link scrollto" href="#about">{{ __('lang.About') }}</a></li>
                     <li><a class="nav-link scrollto" href="#services">{{ __('lang.Services') }}</a></li>

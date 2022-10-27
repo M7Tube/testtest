@@ -45,7 +45,6 @@
                                                 {!! $data->body !!}
                                             </p>
                                         </td>
-                                        {{--  --}}
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0"><img
                                                     src="data:image/png|jpg|jpeg;base64, {!! base64_encode(file_get_contents('../storage/app/img/' . $data->picture)) !!}"

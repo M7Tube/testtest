@@ -202,7 +202,7 @@
                                 </form>
                             </div>
                         </div>
-                        {{-- <div class="widget-sidebar">f
+                        {{-- <div class="widget-sidebar">
                             <h5 class="sidebar-title">Recent Post</h5>
                             <div class="sidebar-content">
                                 <ul class="list-sidebar">

@@ -196,7 +196,7 @@
                                 <form>
                                     <div class="input-group">
                                         <a class="btn btn-block w-50 btn-outline-success mx-auto"
-                                            href="{{ $item->buy_link }}"><i class="bi bi-cart-check"></i>
+                                            href="{{ $item->buy_link }}" target="blank"><i class="bi bi-cart-check"></i>
                                             {{ __('Buy Now') }}</a>
                                     </div>
                                 </form>

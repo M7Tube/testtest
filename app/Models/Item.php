@@ -18,6 +18,12 @@ class Item extends Model
         'picture',
         'price',
         'buy_link',
+        'ar_buy_link_title_text',
+        'en_buy_link_title_text',
+        'buy_link_text',
+        'free_item_with_email_send',
+        'email_text',
+        'email_file',
         'user_id',
     ];
 

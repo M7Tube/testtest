@@ -19,24 +19,18 @@ class Items extends Component
     public $ar_desc;
     public $picture;
     public $buy_link;
+    public $buy_link_text;
+    public $ar_buy_link_title_text;
+    public $en_buy_link_title_text;
+    public $free_item_with_email_send;
+    public $email_text;
+    public $email_file;
     public $price;
     public $user_id;
 
     public $orderBy = 'en_name';
     public $orderAsc = true;
     public $search = '';
-
-    public function clear()
-    {
-        $this->livewire_clear([
-            'item_id', 'en_name', 'ar_name',
-            'en_desc',
-            'ar_desc',
-            'buy_link',
-            'price',
-            'picture', 'user_id'
-        ]);
-    }
 
     public function render()
     {

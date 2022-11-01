@@ -21,6 +21,12 @@ class EditItems extends Component
     public $picture;
     public $price;
     public $buy_link;
+    public $buy_link_text;
+    public $ar_buy_link_title_text;
+    public $en_buy_link_title_text;
+    public $free_item_with_email_send;
+    public $email_text;
+    public $email_file;
     public $user_id;
 
     public $message;
@@ -34,6 +40,12 @@ class EditItems extends Component
             $this->en_name = $data->en_name;
             $this->ar_desc = $data->ar_desc;
             $this->buy_link = $data->buy_link;
+            $this->buy_link_text = $data->buy_link_text;
+            $this->ar_buy_link_title_text = $data->ar_buy_link_title_text;
+            $this->en_buy_link_title_text = $data->en_buy_link_title_text;
+            $this->free_item_with_email_send = $data->free_item_with_email_send;
+            $this->email_text = $data->email_text;
+            $this->email_file = $data->email_file;
             $this->price = $data->price;
             $this->oldpicture = $data->picture;
             $this->en_desc = $data->en_desc;
@@ -57,22 +69,34 @@ class EditItems extends Component
             'ar_desc' => ['required', 'string', 'max:28800'],
             'en_desc' => ['required', 'string', 'max:28800'],
             'en_desc' => ['required', 'string', 'max:28800'],
-            'price' => ['required', 'integer'],
-            'buy_link' => ['required', 'string'],
+            'price' => ['integer'],
+            'buy_link' => ['string'],
+            'buy_link_text' => ['string'],
+            'ar_buy_link_title_text' => ['string'],
+            'en_buy_link_title_text' => ['string'],
+            'free_item_with_email_send' => ['boolean'],
+            'email_text' => ['string'],
+            'email_file' => ['string'],
         ]);
         $data = Item::where('item_id', $this->item_id)->first();
         if ($data) {
             $data->ar_name = $this->ar_name;
             $data->en_name = $this->en_name;
             $data->ar_desc = $this->ar_desc;
-            $data->buy_link = $this->buy_link;
-            $data->price = $this->price;
+            $data->en_desc = $this->en_desc;
+            $data->buy_link = $this->buy_link ?? null;
+            $data->buy_link_text = $this->buy_link_text ?? null;
+            $data->ar_buy_link_title_text = $this->ar_buy_link_title_text ?? null;
+            $data->en_buy_link_title_text = $this->en_buy_link_title_text ?? null;
+            $data->free_item_with_email_send = $this->free_item_with_email_send ?? null;
+            $data->email_text = $this->email_text ?? null;
+            $data->email_file = $this->email_file ?? null;
+            $data->price = $this->price ?? null;
             if (!$this->picture) {
                 $data->picture = $this->oldpicture;
             } else {
                 $data->picture = $this->picture->getClientOriginalName();
             }
-            $data->en_desc = $this->en_desc;
             $data->save();
             return redirect()->route('Items', app()->getLocale());
         } else {

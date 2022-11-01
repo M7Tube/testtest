@@ -20,6 +20,11 @@ class CreateItem extends Component
     public $picture;
     public $price;
     public $buy_link;
+    public $buy_link_text;
+    public $buy_link_title_text;
+    public $free_item_with_email_send;
+    public $email_text;
+    public $email_file;
     public $user_id;
 
     public function mount()
@@ -42,8 +47,13 @@ class CreateItem extends Component
             'ar_desc' => ['required', 'string', 'max:28800'],
             'en_desc' => ['required', 'string', 'max:28800'],
             'picture' => ['required', 'mimes:jpg,png,jpeg'],
-            'price' => ['required', 'integer'],
-            'buy_link' => ['required', 'string'],
+            'price' => ['integer'],
+            'buy_link' => ['string'],
+            'buy_link_text' => ['string'],
+            'buy_link_title_text' => ['string'],
+            'free_item_with_email_send' => ['boolean'],
+            'email_text' => ['string'],
+            'email_file' => ['string'],
             'user_id' => ['required', 'integer', 'exists:users,user_id'],
         ]);
         Item::Create([
@@ -52,8 +62,13 @@ class CreateItem extends Component
             'ar_desc' => $this->ar_desc,
             'en_desc' => $this->en_desc,
             'picture' => $this->picture->getClientOriginalName(),
-            'price' => $this->price,
-            'buy_link' => $this->buy_link,
+            'price' => $this->price ?? null,
+            'buy_link' => $this->buy_link ?? null,
+            'buy_link_text' => $this->buy_link_text ?? null,
+            'buy_link_title_text' => $this->buy_link_title_text ?? null,
+            'free_item_with_email_send' => $this->free_item_with_email_send ?? 0,
+            'email_text' => $this->email_text ?? null,
+            'email_file' => $this->email_file ?? null,
             'user_id' => $this->user_id,
         ]);
         $this->clear();
@@ -71,6 +86,12 @@ class CreateItem extends Component
             'picture',
             'price',
             'buy_link',
+            'ar_buy_link_title_text',
+            'en_buy_link_title_text',
+            'buy_link_text',
+            'free_item_with_email_send',
+            'email_text',
+            'email_file',
             'user_id',
         ]);
     }

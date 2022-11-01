@@ -22,8 +22,20 @@
                                         {{ __('Arabic Descriptions') }}</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         {{ __('Buy Link') }}</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            {{ __('Price') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Buy Link Text') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('English Buy Link Title Text') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Arabic Buy Link Title Text') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Free Email') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Email text') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Email file') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Price') }}</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         {{ __('Picture') }}</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -39,22 +51,44 @@
                                 @forelse ($items as $data)
                                     <tr>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $data->en_name }}</p>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->en_name ?? '' }}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $data->ar_name }}</p>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->ar_name ?? '' }}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0"> {!! $data->en_desc !!}</p>
+                                            <p class="text-xs font-weight-bold mb-0"> {!! $data->en_desc ?? '' !!}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{!! $data->ar_desc !!}</p>
+                                            <p class="text-xs font-weight-bold mb-0">{!! $data->ar_desc ?? '' !!}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $data->buy_link }}</p>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->buy_link ?? '' }}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $data->price }}</p>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->buy_link_text ?? '' }}
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                {{ $data->en_buy_link_title_text ?? '' }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                {{ $data->ar_buy_link_title_text ?? '' }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                {{ $data->free_item_with_email_send ?? '' }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->email_text ?? '' }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->email_file ?? '' }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->price ?? '' }}</p>
                                         </td>
                                         <td>
 
